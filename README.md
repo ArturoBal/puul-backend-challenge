@@ -41,11 +41,12 @@ DB_PORT=5432
 DB_NAME=TaskManager
 DB_USER=postgres
 DB_PASSWORD=secretPass
+DB_SYNCHRONIZE=false
 ```
 
-4. Start the database (choose one):
+4. Start the database:
 
-- Using Docker Compose (recommended):
+- Using Docker Compose:
 
 ```bash
 docker-compose up -d
@@ -55,7 +56,16 @@ docker-compose logs -f
 
 - Or ensure you have a PostgreSQL instance running and reachable using the `.env` credentials.
 
-5. Run the application:
+5. Run database migrations to set up the schema:
+
+```bash
+yarn typeorm:migration:generate
+yarn typeorm:migration:run
+# or
+npm run typeorm:migration:run
+```
+
+6. Run the application:
 
 - Development (auto-reload):
 
