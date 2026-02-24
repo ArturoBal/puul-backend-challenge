@@ -38,9 +38,9 @@ API_PORT=3001
 # Postgres connection
 DB_HOST=localhost
 DB_PORT=5432
+DB_USERNAME=postgres
 DB_NAME=TaskManager
-DB_USER=postgres
-DB_PASSWORD=secretPass
+DB_PASSWORD=s3cr3tP@ssw0rd
 DB_SYNCHRONIZE=false
 ```
 
